@@ -1,0 +1,108 @@
+.login-container {
+    background-color: $grey;
+    min-height: 100vh;
+   
+    header {
+        @include layout(flex, center, space-between);
+        width: 90%;
+        margin: 0 auto;
+        padding: 2em 0;
+    
+        .logo {
+            width: 150px;
+        }
+
+        a {
+            padding: .5em 1em;
+        }
+
+        a:first-child {
+            margin-right: 1.5em;
+        }
+
+        a:hover, a:focus {
+            color: $blue;
+            border-radius: 30px;
+            border: 1px solid $blue;
+        }
+    }
+    
+    .content {
+        @include layout(flex, center, space-between);
+
+        .intro {
+            @include layout(flex, flex-start, space-between);
+            flex-direction: column;
+            width: 45%;
+            align-self: baseline;
+            padding-left: 70px;
+            height: 40vh;
+
+            h1 {
+                color: $blue;
+                font-size: 3.2rem;
+                font-weight: 500;
+            }
+
+            button {
+                width: 70%;
+                margin-top: auto;
+                border-radius: 50px;
+                padding: 1em;
+                background-color: white;
+                border: 1px solid #000;
+                font-size: 1rem;
+                font-weight: 500;
+
+                img {
+                    padding-right: .5em;
+                    vertical-align: middle;
+                }            
+            }
+        }
+
+        .heroBg {
+            width: 45%;
+            padding: 1em;
+            img {
+                width: 100%;
+            }
+        }  
+    }
+}
+
+@media (max-width: 600px) {
+    .login-container {
+
+        header {
+            .logo {
+                width: 100px;
+            }
+          }
+
+        .content {
+            flex-direction: column;
+
+            .heroBg {
+                width: 100%;
+                order: 1;
+            }
+    
+            .intro {
+                width: 90%;
+                padding: 1em;
+                order: 2;
+                height: auto;
+                padding-bottom: 2em;
+
+                h1 {
+                    font-size: 2.2rem;
+                }
+
+                button {
+                    width: 100%;
+                }
+            }
+        }      
+    }
+}
