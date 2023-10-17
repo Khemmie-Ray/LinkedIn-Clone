@@ -3,7 +3,6 @@ import loginBg from "../assets/login-hero.svg"
 import googleIcon from "../assets/google.svg"
 import linkedinicon from "../assets/linkedin1.svg"
 import { NavLink } from 'react-router-dom'
-// import Header from '../component/Header'
 
 const LogIn = () => {
   return (
@@ -24,8 +23,6 @@ const LogIn = () => {
            <img src={loginBg} alt="" />
         </section>
         </main>
-
-        {/* <Header /> */}
     </div>
   )
 }

@@ -1,0 +1,91 @@
+.header-wrapper {
+    background-color: $white;
+    padding: 1.5em 0;
+
+    header, .top-nav, a, nav {
+        @include layout(flex, center, space-between);
+    }
+
+    header {
+        width: 90%;
+        margin: 0 auto;
+
+        .top-nav {
+            width: 30%;
+
+            .logo {
+                width: 10%;
+            }
+
+            .search {
+                background-color: $lightblue;
+                width: 85%;
+                padding: .7em 1em;
+
+                .searchIcon {
+                    vertical-align: middle;
+                    margin-right: 1em;
+                    font-size: 1.2rem;
+                }
+
+                input {
+                    border: 0;
+                    outline: none;
+                    background-color: transparent;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        nav {
+            width: 50%;
+
+            a {
+                flex-direction: column;
+                color: $lightgrey;
+                font-weight: 500;
+            }
+
+            a:hover, a:focus {
+                color: $black;
+            }
+
+            .icon {
+                font-size: 1.4rem;
+            }
+
+            a:last-child {
+                border-left: 3px solid $grey;
+                padding: 0 .5em;
+            }
+
+            .avatar {
+                width: 35px;
+                border-radius: 50px;
+            }
+        }     
+    }
+}
+
+@media (max-width: 600px) {
+    .header-wrapper {
+        header {
+            .top-nav {
+                width: 100%;
+            }
+    
+            nav {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 1em;
+                background-color: $white;
+
+                .profile, .business, .navlink {
+                    display: none;
+                }
+            }
+        }      
+    }
+}

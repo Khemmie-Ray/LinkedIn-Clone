@@ -5,29 +5,28 @@ import { FaUserGroup } from 'react-icons/fa6'
 import { FaBriefcase, FaCommentDots } from 'react-icons/fa'
 import { IoMdNotifications, IoMdArrowDropdown } from 'react-icons/io'
 import { PiDotsNineBold } from 'react-icons/pi'
+import linkedinIcon from '../assets/linkedin.png'
+import { FiSearch } from 'react-icons/fi'
 
 const Header = () => {
   return (
-    <div>
+    <div className='header-wrapper'>
         <header>
-            <div>
-             <img src="" alt="" />
+            <div className='top-nav'>
+             <img src={linkedinIcon} alt="" className='logo'/>
+             <div className='search'>
+                <FiSearch className='searchIcon' />
              <input type="text" placeholder='search' />
+             </div>
             </div>
             <nav>
-                <NavLink><ImHome3 /> Home</NavLink>
-                <NavLink><FaUserGroup /> My Network</NavLink>
-                <NavLink><FaBriefcase/> Jobs</NavLink>
-                <NavLink><FaCommentDots />Messaging</NavLink>
-                <NavLink><IoMdNotifications />Notifications</NavLink>
-                <div>
-                    <img src="https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" />
-                    <NavLink>Me <IoMdArrowDropdown /></NavLink>
-                </div>
-                <div>
-                    <PiDotsNineBold />
-                    <NavLink>Work <IoMdArrowDropdown /></NavLink>
-                </div>
+                <NavLink><ImHome3 className='icon' /> <span className='navlink'>Home</span></NavLink>
+                <NavLink><FaUserGroup className='icon' /> <span className='navlink'>My Network</span></NavLink>
+                <NavLink to="work"><FaBriefcase className='icon'/> <span className='navlink'>Jobs</span> </NavLink>
+                <NavLink><FaCommentDots className='icon'/><span className='navlink'>Messaging</span> </NavLink>
+                <NavLink><IoMdNotifications className='icon'/><span className='navlink'>Notifications</span></NavLink>    
+                <NavLink className="profile"><img src="https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" className='avatar' /><span> Me <IoMdArrowDropdown /></span></NavLink>
+                <NavLink className="business"><PiDotsNineBold className='icon' /><span> For Business <IoMdArrowDropdown /></span></NavLink>
             </nav>
         </header>
     </div>
