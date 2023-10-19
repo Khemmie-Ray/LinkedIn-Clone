@@ -1,0 +1,69 @@
+.sidebar {
+    width: 25%;
+
+    .top-sidebar {
+        background-color: $white;
+        border-radius: 10px;
+
+        .profile-bg {
+            text-align: center;
+            position: relative;
+
+            .card-bg {
+                width: 100%;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            .profile-img {
+                background-color: $white;
+                width: 40%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                padding: .5em;
+                border-radius: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+
+       .name {
+            text-align: center;
+            padding: 1em;
+            border-bottom: 1px solid $blue;
+
+            h3 {
+                font-size: 1rem;
+                margin-bottom: 0;
+            }
+
+            p {
+                margin-top: 0;
+                color: $blue;
+            }
+       }
+    }
+
+    .item {
+        padding: 1em;
+    }
+
+    .network {
+        border-bottom: 1px solid $lightgrey;
+        padding: 1em;
+        @include layout(flex, center, space-between);
+    }
+
+    .bold, .connect-icon {
+        font-weight: 700;
+    }
+
+    .connect-icon {
+        font-size: 1.2rem;
+    }
+
+    .hashtags {
+        background-color: $white;
+        border-radius: 10px;
+    }
+}

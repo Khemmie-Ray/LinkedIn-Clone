@@ -38,16 +38,18 @@
         }
 
         nav {
-            width: 50%;
+            width: 60%;
 
             a {
                 flex-direction: column;
                 color: $lightgrey;
                 font-weight: 500;
+                padding-bottom: .5em;
             }
 
             a:hover, a:focus {
                 color: $black;
+                border-bottom: 2px solid $black;
             }
 
             .icon {
@@ -88,4 +90,10 @@
             }
         }      
     }
+}
+
+.side-wrapper {
+    @include layout(flex, baseline, space-between);
+    width: 90%;
+    margin: 2em auto 0;
 }

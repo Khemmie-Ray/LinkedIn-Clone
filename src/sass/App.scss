@@ -14,7 +14,6 @@ $grey: #f5f5f5;
 $blue:  #0072b1;
 $white: #ffffff;
 $black: #000;
-// $lightblue: rgb(162, 162, 239);
 $lightblue: #e8f3ff;
 $lightgrey: #56687a;
 $darkgrey: #293138;
@@ -39,8 +38,6 @@ a {
   text-decoration: none;
 }
 
-
-
 %button-style {
   padding: 1em 1.5em;
   border-radius: 8px;
@@ -53,3 +50,4 @@ a {
 @import './login';
 @import './component';
 @import './feed';
+@import './rightbar.scss'
