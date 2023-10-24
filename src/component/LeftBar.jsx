@@ -4,23 +4,21 @@ import { CgHashtag } from 'react-icons/cg'
 
 const LeftBar = () => {
   return (
-    <div className='sidebar '>
-      <div className='top-sidebar'>
-      <div>
-        <h2>Add to your feed</h2>
-        <img src={infoIcon} alt="" />
+    <div className='left-bar'>
+      <div className='fcard1'>
+        <h3>Add to your feed</h3>
+        <img src={infoIcon} alt="" className='f-icon'/>
       </div>
       <div className="feed-card">
-        <div>
-          <CgHashtag />
-          <p>#linkedin <br /> <button>follow</button></p>
+        <div className='fcard'>
+          <CgHashtag className='tag1' />
+          <p>#Linkedin <br /> <button className='follow-btn'>Follow</button></p>
         </div>
-        <div>
-          <CgHashtag />
-          <p>#linkedin <br /> <button>follow</button></p>
+        <div className='fcard'>
+          <CgHashtag className='tag1' />
+          <p>#Video <br /> <button className='follow-btn'>Follow</button></p>
         </div>
-        <p>View all recommendations &rarr;</p>
-      </div>
+        <p className='rec-text'>View all recommendations &rarr;</p>
       </div>
     </div>
   )

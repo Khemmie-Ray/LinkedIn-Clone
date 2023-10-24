@@ -67,3 +67,54 @@
         border-radius: 10px;
     }
 }
+
+.left-bar {
+    background-color: $white;
+    width: 25%;
+    border-radius: 10px;
+    align-self: baseline;
+    padding: .5em 1em;
+
+    .fcard1 {
+        @include layout(flex, center, space-between);
+
+        .f-icon {
+            width: 25px;
+        }
+    }
+
+    .fcard {
+        @include layout(flex, center, flex-start);
+
+        p {
+            font-weight: 700;
+            width: 40%;
+
+            button {
+                padding: .5em;
+                background-color: $white;
+                border: 2px solid $lightgrey;
+                border-radius: 50px;
+                width: 100%;
+            }
+        }
+
+        .tag1 {
+            font-size: 3rem;
+            border-radius: 50px;
+            border: 8px solid $lightgrey;
+            margin-right: 13px;
+        }
+    }
+
+    .rec-text {
+        color: $blue;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar, .left-bar {
+        width: 100%;
+    }
+}

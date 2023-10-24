@@ -12,9 +12,9 @@ import Work from "./pages/Work";
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route>
-  <Route path="/login" element={<LogIn />} />
+  <Route index element={<LogIn />} />
   <Route element={<Layout />}>
-  <Route index element={<Feed />} />
+  <Route path="/home" element={<Feed />} />
   <Route path="/work" element={<Work />} />
   </Route>
   </Route>

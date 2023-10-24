@@ -7,8 +7,18 @@ import { IoMdNotifications, IoMdArrowDropdown } from 'react-icons/io'
 import { PiDotsNineBold } from 'react-icons/pi'
 import linkedinIcon from '../assets/linkedin.png'
 import { FiSearch } from 'react-icons/fi'
+import { auth } from '../config/firebase'
+import { signOut } from 'firebase/auth'
 
 const Header = () => {
+  const logout = async () => {
+    try {
+      await signOut(auth)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   return (
     <div className='header-wrapper'>
         <header>
@@ -25,7 +35,7 @@ const Header = () => {
                 <NavLink to="work"><FaBriefcase className='icon'/> <span className='navlink'>Jobs</span> </NavLink>
                 <NavLink><FaCommentDots className='icon'/><span className='navlink'>Messaging</span> </NavLink>
                 <NavLink><IoMdNotifications className='icon'/><span className='navlink'>Notifications</span></NavLink>    
-                <NavLink className="profile"><img src="https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" className='avatar' /><span> Me <IoMdArrowDropdown /></span></NavLink>
+                <NavLink className="profile" onClick={logout}><img src="https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" className='avatar' /><span> Me <IoMdArrowDropdown /></span></NavLink>
                 <NavLink className="business"><PiDotsNineBold className='icon' /><span> For Business <IoMdArrowDropdown /></span></NavLink>
             </nav>
         </header>

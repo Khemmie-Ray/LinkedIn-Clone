@@ -1,10 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import loginBg from "../assets/login-hero.svg"
 import googleIcon from "../assets/google.svg"
 import linkedinicon from "../assets/linkedin1.svg"
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { signInWithPopup } from 'firebase/auth'
+import { auth, googleProvider } from '../config/firebase'
 
 const LogIn = () => {
+  const navigate = useNavigate();
+  const [user, setUser] = useState(null)
+
+  const googleSignIn = async () => {
+    try {
+     const success = await signInWithPopup(auth, googleProvider)
+      navigate('/home')
+      setUser(success.user)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+console.log(auth?.currentUser?.email)
+// console.log(auth?.currentUser?.name)
+// console.log(auth?.currentUser?.photourl)
+
   return (
     <div className='login-container'>
         <header>
@@ -17,7 +35,7 @@ const LogIn = () => {
         <main className='content'>
         <section className='intro'>
         <h1>Welcome to your professional community</h1>
-        <button><img src={googleIcon} alt="" />Sign In with Google</button>
+        <button onClick={googleSignIn}><img src={googleIcon} alt="" />Sign In with Google</button>
         </section>
         <section className='heroBg'>
            <img src={loginBg} alt="" />

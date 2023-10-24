@@ -1,9 +1,12 @@
 import React from 'react'
+import Newpost from '../component/Newpost'
+import PostFeed from '../component/PostFeed'
 
 const Feed = () => {
   return (
-    <div>
-         help me  
+    <div className="feed">
+        <Newpost />
+        <PostFeed />
     </div>
   )
 }
