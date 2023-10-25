@@ -17,6 +17,7 @@ $black: #000;
 $lightblue: #e8f3ff;
 $lightgrey: #56687a;
 $darkgrey: #293138;
+$bordergrey: rgb(187, 185, 185);
 
 * {
   box-sizing: border-box;
@@ -38,16 +39,17 @@ a {
   text-decoration: none;
 }
 
-%button-style {
-  padding: 1em 1.5em;
-  border-radius: 8px;
-  font-weight: 700;
-  border: 0;
-  height: 90px;
-}
+// %button-style {
+//   padding: 1em 1.5em;
+//   border-radius: 8px;
+//   font-weight: 700;
+//   border: 0;
+//   height: 90px;
+// }
 
 @import './login';
 @import './component';
 @import './feed';
 @import './rightbar.scss';
 @import './home';
+@import './postfeed'

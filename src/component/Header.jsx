@@ -9,6 +9,7 @@ import linkedinIcon from '../assets/linkedin.png'
 import { FiSearch } from 'react-icons/fi'
 import { auth } from '../config/firebase'
 import { signOut } from 'firebase/auth'
+import profileImg from '../assets/profile.jpeg'
 
 const Header = () => {
   const logout = async () => {
@@ -35,7 +36,7 @@ const Header = () => {
                 <NavLink to="work"><FaBriefcase className='icon'/> <span className='navlink'>Jobs</span> </NavLink>
                 <NavLink><FaCommentDots className='icon'/><span className='navlink'>Messaging</span> </NavLink>
                 <NavLink><IoMdNotifications className='icon'/><span className='navlink'>Notifications</span></NavLink>    
-                <NavLink className="profile" onClick={logout}><img src="https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" className='avatar' /><span> Me <IoMdArrowDropdown /></span></NavLink>
+                <NavLink className="profile" onClick={logout}><img src={profileImg} alt="" className='avatar' /><span> Me <IoMdArrowDropdown /></span></NavLink>
                 <NavLink className="business"><PiDotsNineBold className='icon' /><span> For Business <IoMdArrowDropdown /></span></NavLink>
             </nav>
         </header>

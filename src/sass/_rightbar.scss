@@ -1,5 +1,5 @@
 .sidebar {
-    width: 25%;
+    width: 20%;
 
     .top-sidebar {
         background-color: $white;
@@ -29,7 +29,7 @@
 
        .name {
             text-align: center;
-            padding: 1em;
+            padding: 2em 1em 1em;
             border-bottom: 1px solid $blue;
 
             h3 {
@@ -70,7 +70,7 @@
 
 .left-bar {
     background-color: $white;
-    width: 25%;
+    width: 20%;
     border-radius: 10px;
     align-self: baseline;
     padding: .5em 1em;

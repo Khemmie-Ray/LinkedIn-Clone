@@ -20,8 +20,7 @@ const LogIn = () => {
     }
   }
 console.log(auth?.currentUser?.email)
-// console.log(auth?.currentUser?.name)
-// console.log(auth?.currentUser?.photourl)
+console.log(auth?.currentUser)
 
   return (
     <div className='login-container'>

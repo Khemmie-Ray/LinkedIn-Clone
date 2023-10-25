@@ -1,6 +1,8 @@
 .header-wrapper {
     background-color: $white;
     padding: 1.5em 0;
+    position: relative;
+
 
     header, .top-nav, a, nav {
         @include layout(flex, center, space-between);
@@ -62,7 +64,8 @@
             }
 
             .avatar {
-                width: 35px;
+                width: 30px;
+                height: 25px;
                 border-radius: 50px;
             }
         }     

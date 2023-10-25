@@ -2,12 +2,13 @@ import React from 'react';
 import { BsImageFill } from 'react-icons/bs';
 import { BiSolidCalendar } from 'react-icons/bi';
 import { MdEditNote } from 'react-icons/md';
+import profileImg from '../assets/profile.jpeg';
 
 const Newpost = () => {
   return (
     <section className="newpost">
         <div className="startpost">
-        <img src="https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" className='avatar' />
+        <img src={profileImg} alt="" className='avatar' />
         <textarea name="" id=""  placeholder='Start post'/>
         </div>
         <div className="file-wrapper">
