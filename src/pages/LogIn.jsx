@@ -14,13 +14,15 @@ const LogIn = () => {
     try {
      const success = await signInWithPopup(auth, googleProvider)
       navigate('/home')
-      setUser(success.user)
+      setUser(success?.user)
+      console.log('User', success?.user)
     } catch (error) {
       console.error(error)
     }
   }
-console.log(auth?.currentUser?.email)
-console.log(auth?.currentUser)
+// console.log(auth?.currentUser?.email)
+// console.log(auth?.currentUser)
+console.log('Usertwo:', user)
 
   return (
     <div className='login-container'>

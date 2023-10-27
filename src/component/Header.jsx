@@ -31,9 +31,9 @@ const Header = () => {
              </div>
             </div>
             <nav>
-                <NavLink><ImHome3 className='icon' /> <span className='navlink'>Home</span></NavLink>
-                <NavLink><FaUserGroup className='icon' /> <span className='navlink'>My Network</span></NavLink>
-                <NavLink to="work"><FaBriefcase className='icon'/> <span className='navlink'>Jobs</span> </NavLink>
+                <NavLink to="/home"><ImHome3 className='icon' /> <span className='navlink'>Home</span></NavLink>
+                <NavLink to=""><FaUserGroup className='icon' /> <span className='navlink'>My Network</span></NavLink>
+                <NavLink to="/work"><FaBriefcase className='icon'/> <span className='navlink'>Jobs</span> </NavLink>
                 <NavLink><FaCommentDots className='icon'/><span className='navlink'>Messaging</span> </NavLink>
                 <NavLink><IoMdNotifications className='icon'/><span className='navlink'>Notifications</span></NavLink>    
                 <NavLink className="profile" onClick={logout}><img src={profileImg} alt="" className='avatar' /><span> Me <IoMdArrowDropdown /></span></NavLink>

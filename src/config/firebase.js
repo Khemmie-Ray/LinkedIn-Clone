@@ -18,18 +18,10 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const db = getFirestore();
-// export default db;
 
-// collection access
-
-// const colRef = collection(db, 'postcard')
-// getDocs(colRef)
-// .then(snapshot => {
-//   console.log(snapshot.docs)
-// })
 
 // export default colRef;
 
 export const auth = getAuth(app)
 export const googleProvider = new GoogleAuthProvider();
+export const db = getFirestore(app);
