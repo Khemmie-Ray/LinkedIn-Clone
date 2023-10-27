@@ -59,7 +59,6 @@ const PostFeed = () => {
           </span>
         )} 
       </p> 
-      <p>{index} {info.id}</p>
         <img src={info.content[1]} alt="" />
       </div>
       <div className='commentBox'>
